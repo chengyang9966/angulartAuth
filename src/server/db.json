@@ -1,0 +1,28 @@
+{
+  "orders": [
+    {
+      "id": 1,
+      "name": "Sandwich",
+      "coach": "Ernesto Valverde",
+      "description": "The best football team in the world!"
+    },
+    {
+      "id": 2,
+      "name": "Steak",
+      "coach": "Zinedine Zidane",
+      "description": "The worst football team in the world!"
+    },
+    {
+      "id": 3,
+      "name": "Nasi Lemak",
+      "coach": "Zinedine Zidane",
+      "description": "The worst football team in the world!"
+    },
+    {
+      "id": 4,
+      "name": "Fried Rice",
+      "coach": "Zinedine Zidane",
+      "description": "The worst football team in the world!"
+    }
+  ]
+}
