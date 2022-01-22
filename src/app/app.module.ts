@@ -15,6 +15,7 @@ import { OrderService } from './services/order.service';
 import { AuthGuard } from './services/auth.guard';
 import { NotFoundComponent } from './services/not-found/not-found.component';
 import { AdminGuard } from './services/admin.guard';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { AdminGuard } from './services/admin.guard';
     HomeComponent,
     AdminComponent,
     NotFoundComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

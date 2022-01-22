@@ -1,0 +1,59 @@
+<nav
+  [ngClass]="navBarColorClass"
+  (click)="test()"
+  class="navbar navbar-expand-lg bg-light px-3"
+>
+  <a class="navbar-brand" href="#">Logger</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          routerLink="/"
+          [routerLinkActiveOptions]="{ exact: true }"
+          routerLinkActive="active"
+          >Home
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          *ngIf="auth.isLoggedIn() && auth.isAdmin()"
+          class="nav-link"
+          [routerLink]="['/admin']"
+          routerLinkActive="active"
+          >Admin
+        </a>
+      </li>
+    </ul>
+    <div class="navbar-nav">
+      <div class="nav-item">
+        <a
+          *ngIf="auth.isLoggedIn()"
+          (click)="auth.logout()"
+          class="nav-link"
+          href="#"
+          >Logout</a
+        >
+        <a
+          *ngIf="!auth.isLoggedIn()"
+          routerLink="/login"
+          class="nav-link"
+          href="#"
+          >Login</a
+        >
+      </div>
+    </div>
+  </div>
+</nav>

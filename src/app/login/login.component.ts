@@ -1,10 +1,4 @@
-import {
-  Component,
-  Inject,
-  OnInit,
-  SimpleChange,
-  SimpleChanges,
-} from '@angular/core';
+import { Component } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -13,7 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.sass'],
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   form: any = {
     username: null,
     password: null,
@@ -57,5 +51,4 @@ export class LoginComponent implements OnInit {
   isviewUpdate(value: boolean) {
     this.isView = value;
   }
-  ngOnInit(): void {}
 }

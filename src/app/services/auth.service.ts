@@ -53,6 +53,9 @@ export class AuthService {
     localStorage.removeItem(TOKEN_KEY);
     this.currentUser = null;
   }
+  isAdmin(): boolean {
+    return this.currentUser.admin;
+  }
 
   isLoggedIn(): boolean {
     let Token = this.getToken();

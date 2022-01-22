@@ -2,12 +2,7 @@
 <p *ngIf="authService.isLoggedIn()">
   Welcome {{ authService.currentUser.name }}
 </p>
-<ul>
-  <li *ngIf="authService.currentUser?.admin && authService.isLoggedIn()">
-    <a routerLink="/admin">Admin</a>
-  </li>
-  <li *ngIf="!authService.isLoggedIn()"><a routerLink="/login">Login</a></li>
-  <li *ngIf="authService.isLoggedIn()">
-    <a (click)="authService.logout()">Logout</a>
-  </li>
-</ul>
+<p *ngIf="!authService.isLoggedIn()">
+  This is a web application for users to see all thier pass records
+</p>
+<p *ngIf="authService.isLoggedIn()">Congratz you are a verified user</p>

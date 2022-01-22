@@ -4,14 +4,14 @@ var server = jsonServer.create();
 var dbData = require("./db.json");
 var user = require("./login");
 
-const middlewares = jsonServer.defaults({
+var middlewares = jsonServer.defaults({
   noCors: true,
   bodyParser: true,
   static: "./build",
 });
 var cusotmMiddlewares = require("./middleware");
 var data = jsonServer.router(dbData);
-const PORT = 8888;
+var PORT = 8888;
 
 server.use(middlewares);
 server.post("/api/register", user.register);
