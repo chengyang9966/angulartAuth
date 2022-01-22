@@ -20,7 +20,7 @@ server.post("/api/authenticate", cusotmMiddlewares, user.auth);
 
 server.use("/api", cusotmMiddlewares, data);
 
-server.all("*", (req, res) => {
+server.all("*", function (req, res) {
   res.status(404).json({ msg: "Invalid Route" });
 });
 server.listen(PORT, function () {
