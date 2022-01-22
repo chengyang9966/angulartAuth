@@ -10,10 +10,10 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.use(express.static(__dirname + "/dist"));
+app.use(express.static(path.join(__dirname, "dist", "authentiocation")));
 
 app.get("/*", function (req, res) {
-  res.sendFile(path.join(__dirname + "/dist/index.html"));
+  res.sendFile(path.join(__dirname, "dist", "authentiocation", "index.html"));
 });
 
 app.listen(process.env.PORT || 9999);
