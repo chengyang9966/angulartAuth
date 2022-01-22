@@ -10,7 +10,7 @@
     "dev": "concurrently \"ng serve\" \"nodemon src/server/server.js \"",
     "test": "ng test",
     "lint": "ng lint",
-    "heroku-postbuild": "ng build — prod"
+    "heroku-postbuild": "ng build -- prod"
   },
   "private": true,
   "dependencies": {
