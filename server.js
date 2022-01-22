@@ -4,7 +4,7 @@ var app = express();
 app.use(function (req, res, next) {
   res.setHeader(
     "Content-Security-Policy",
-    "default-src 'self'; font-src 'self'; img-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css; frame-src 'self';"
+    " default-src 'self';script-src 'self' 'unsafe-inline';style-src 'self' 'unsafe-inline'; object-src 'none';base-uri 'self'; connect-src 'self';font-src 'self';frame-src 'self';img-src 'self'; manifest-src 'self';media-src 'self'; worker-src 'none'; "
   );
   next();
 });
