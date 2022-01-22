@@ -1,5 +1,6 @@
 var express = require("express");
 var app = express();
+const path = require("path");
 
 app.use(function (req, res, next) {
   res.setHeader(
@@ -11,8 +12,8 @@ app.use(function (req, res, next) {
 
 app.use(express.static(__dirname + "/dist"));
 
-app.all("*", (req, res) => {
-  res.sendDate(__dirname + "/dist/index.html");
+app.get("/*", function (req, res) {
+  res.sendFile(path.join(__dirname + "/dist/<app-name>/index.html"));
 });
 
 app.listen(process.env.PORT || 9999);
